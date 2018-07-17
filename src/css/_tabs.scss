@@ -1,0 +1,26 @@
+.simple-tabs {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media all and (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    .simple-tab-trigger {
+        &.active {
+            font-weight: bold;
+        }
+    }
+
+    .simple-tab-content {
+        width: 100%;
+
+        @media all and (min-width: 769px) {
+            order: 999;
+        }
+
+        &:not(.active) {
+            display: none;
+        }
+    }
+}
